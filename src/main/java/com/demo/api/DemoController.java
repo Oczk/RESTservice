@@ -1,6 +1,6 @@
 package com.demo.api;
 
-import com.demo.dto.UserRepository;
+import com.demo.db.UserRepository;
 import com.demo.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,15 +20,12 @@ public class DemoController {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping("/hello/{name}")
-    public String hello(@PathVariable String name){
-        return "Hello, " + name;
-    }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<UserDTO> getAll(){
         return userRepository.findAll();
     }
+
 
     @RequestMapping("/add/{name}/{password}")
     public List<UserDTO> adding(@PathVariable String name, @PathVariable String password){
@@ -39,6 +36,7 @@ public class DemoController {
 
         return userRepository.findAll();
     }
+
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public List<UserDTO> remove(@PathVariable long id){

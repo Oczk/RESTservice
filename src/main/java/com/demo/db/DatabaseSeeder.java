@@ -1,7 +1,8 @@
-package com.demo.dto;
+package com.demo.db;
 
 
 import com.demo.api.UserController;
+import com.demo.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

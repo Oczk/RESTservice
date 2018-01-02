@@ -1,5 +1,6 @@
-package com.demo.dto;
+package com.demo.db;
 
+import com.demo.dto.UserDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
